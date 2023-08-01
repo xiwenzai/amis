@@ -27,7 +27,7 @@ const schema = {
         {
           type: 'input-text',
           name: 'a',
-          label: 'Text'
+          label: 'Text1'
         }
       ]
     }
@@ -727,7 +727,14 @@ export default class AMisSchemaEditor extends React.Component<any, any> {
                   切换语料内容
                 </Button>
               )}
-
+              <div
+                className={`header-action-btn ${preview ? 'primary' : ''}`}
+                onClick={() => {
+                  this.togglePreview();
+                }}
+              >
+                保存
+              </div>
               <div
                 className={`header-action-btn ${preview ? 'primary' : ''}`}
                 onClick={() => {
